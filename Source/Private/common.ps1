@@ -638,7 +638,13 @@ function _callAPI {
    foreach ($e in $extra) { $params.Remove($e) | Out-Null }
 
    try {
-      $resp = Invoke-RestMethod @params
+      if ($PSVersionTable.PSEdition -eq 'Desktop') {
+         $resp = Invoke-RestMethod @params
+      }
+      else {
+         $resp = Invoke-RestMethod @params -ResponseHeadersVariable responseHeaders
+         Write-Verbose $responseHeaders
+      }      
 
       if ($resp) {
          Write-Verbose "return type: $($resp.gettype())"
