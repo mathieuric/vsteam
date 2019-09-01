@@ -643,8 +643,8 @@ function _callAPI {
       }
       else {
          $resp = Invoke-RestMethod @params -ResponseHeadersVariable responseHeaders
-         Write-Verbose $responseHeaders
-      }      
+         Write-Verbose $responseHeaders.Keys
+      }
 
       if ($resp) {
          Write-Verbose "return type: $($resp.gettype())"
