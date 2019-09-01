@@ -59,6 +59,10 @@ Add permissions to a git repository, all repositories in a project, or a specifi
 
 Adds connections to Kubernetes clusters
 
+### [Add-VSTeamMembership](Add-VSTeamMembership.md)
+
+Adds a membership to a container.
+
 ### [Add-VSTeamNuGetEndpoint](Add-VSTeamNuGetEndpoint.md)
 
 Adds a new NuGet service endpoint.
@@ -212,6 +216,10 @@ Returns all the job requests of an agent.
 
 Returns a team member.
 
+### [Get-VSTeamMembership](Get-VSTeamMembership.md)
+
+Gets a memberships for a container or member.
+
 ### [Get-VSTeamOption](Get-VSTeamOption.md)
 
 Returns all the versions of supported APIs of your TFS or VSTS.
@@ -344,6 +352,10 @@ Removes a package feed from the account.
 
 Removes the Git repository from your Visual Studio Team Services or Team Foundation Server account.
 
+### [Remove-VSTeamMembership](Remove-VSTeamMembership.md)
+
+Removes a membership to a container.
+
 ### [Remove-VSTeamPolicy](Remove-VSTeamPolicy.md)
 
 Removes the specified policy from the specified project.
@@ -451,6 +463,10 @@ Opens the release definitions for a team project in the default browser.
 
 Opens the work item in the default browser.
 
+### [Test-VSTeamMembership](Test-VSTeamMembership.md)
+
+Tests the membership in a container.
+
 ### [Update-VSTeam](Update-VSTeam.md)
 
 Updates the team name, description or both.
@@ -482,6 +498,10 @@ Updates the project name, description or both.
 ### [Update-VSTeamRelease](Update-VSTeamRelease.md)
 
 Allows you to update release variables for future stages to read.
+
+### [Update-VSTeamReleaseDefinition](Update-VSTeamReleaseDefinition.md)
+
+Updates a build definition for a team project.
 
 ### [Update-VSTeamServiceEndpoint](Update-VSTeamServiceEndpoint.md)
 

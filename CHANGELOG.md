@@ -1,14 +1,69 @@
 # Changelog
 
+## 6.3.3
+
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/191) from [quintessential5](https://github.com/quintessential5) which included the following:
+
+Get-VSTeamVariableGroup: support for getting by name as well as by ID.
+
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/190) from [Sebastian Schütze](https://github.com/SebastianSchuetze) which included the following:
+
+Updated Add-VSTeamWorkItem and Update-VSTeamWorkItem to support any work item field, also custom ones.
+
+## 6.3.2
+
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/182) from [eosfor](https://github.com/eosfor) which included the following:
+
+Invalidate cache on account change
+
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/181) from [Michael Erpenbeck](https://github.com/GitMje) which included the following:
+
+Fixed typo in README.md file for better readability
+
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/179) from [Jim W](https://github.com/Seekatar) which included the following:
+
+Add PSDrive support for memberships
+
+- Memberships
+  - Groups
+    - Group1
+  - Users
+    - User1
+
+## 6.3.1
+
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/178) from [Jim W](https://github.com/Seekatar) which included the following:
+
+- Add-VSTeamMembership
+- Remove-VSTeamMembership
+- Get-VSTeamMembership
+- Test-VSTeamMembership
+
+## 6.3.0
+
+Added support for the following:
+
+- Update-VSTeamReleaseDefinition
+
+Also added Raw and JSON support to the Get-VSTeamReleaseDefinition.
+The shape of the object returned by Get-VSTeamReleaseDefinition was slightly changed.
+Release definitions was added to the SHiPS provider.
+
+## 6.2.9
+
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/176) from [Carlo Wahlstedt](https://github.com/carlowahlstedt) which included the following:
+
+Updated help to refer to Add-VSTeamProfile instead of Set-VSTeamProfile
+
 ## 6.2.8
 
 Added support for Get-VSTeamJobRequest. The provider was extended to show the Job Request under the Agent.
 
 - Account
-   - Agent Pools
-     - Pool1
-       - Agent1
-         - JobRequest1
+  - Agent Pools
+    - Pool1
+      - Agent1
+        - JobRequest1
 
 ## 6.2.7
 
