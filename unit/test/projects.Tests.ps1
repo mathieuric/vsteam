@@ -1,14 +1,15 @@
 Set-StrictMode -Version Latest
 
-InModuleScope projects {
+InModuleScope VSTeam {
    [VSTeamVersions]::Account = 'https://dev.azure.com/test'
 
    Describe 'Project' {
       . "$PSScriptRoot\mocks\mockProjectNameDynamicParam.ps1"
+      . "$PSScriptRoot\mocks\mockProcessNameDynamicParam.ps1"
 
       Context 'Show-VSTeamProject by ID' {
          Mock Show-Browser
-         
+
          It 'Show call start' {
             Show-VSTeamProject -Id 123456
 
@@ -292,6 +293,7 @@ InModuleScope projects {
          Mock Invoke-RestMethod { return @{status = 'inProgress'; id = 1; url = 'https://someplace.com'} } -ParameterFilter { $Method -eq 'Post' -and $Uri -eq "https://dev.azure.com/test/_apis/projects/?api-version=$([VSTeamVersions]::Core)"}
          Mock _trackProjectProgress
          Mock Invoke-RestMethod { return $singleResult } -ParameterFilter { $Uri -eq "https://dev.azure.com/test/_apis/projects/Test?api-version=$([VSTeamVersions]::Core)" }
+         Mock Get-VSTeamProcess { return @{name = 'Agile'; id = 1}}
 
          It 'Should create project with Agile' {
             Add-VSTeamProject -ProjectName Test -processTemplate Agile
@@ -306,6 +308,7 @@ InModuleScope projects {
          Mock Invoke-RestMethod { return @{status = 'inProgress'; id = 1; url = 'https://someplace.com'} } -ParameterFilter { $Method -eq 'Post' -and $Uri -eq "https://dev.azure.com/test/_apis/projects/?api-version=$([VSTeamVersions]::Core)"}
          Mock _trackProjectProgress
          Mock Invoke-RestMethod { return $singleResult } -ParameterFilter { $Uri -eq "https://dev.azure.com/test/_apis/projects/Test?api-version=$([VSTeamVersions]::Core)" }
+         Mock Get-VSTeamProcess { return @{name = 'CMMI'; id = 1}}
 
          It 'Should create project with CMMI' {
             Add-VSTeamProject -ProjectName Test -processTemplate CMMI

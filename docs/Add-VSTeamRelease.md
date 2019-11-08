@@ -15,7 +15,7 @@ Add-VSTeamRelease will queue a new release.
 
 The environments will deploy according to how the release definition is configured in the Triggers tab.
 
-You must call Add-VSTeamAccount before calling this function.
+You must call Set-VSTeamAccount before calling this function.
 
 ## EXAMPLES
 
@@ -62,8 +62,8 @@ you do not have to pass the ProjectName with each call.
 
 ```yaml
 Type: String
-Required: true
 Position: 0
+Required: True
 Accept pipeline input: true (ByPropertyName)
 ```
 
@@ -144,10 +144,14 @@ Accept pipeline input: true (ByPropertyName)
 
 ### -Force
 
-Forces the command without confirmation
+Forces the function without confirmation
 
 ```yaml
 Type: SwitchParameter
+Required: false
+Position: Named
+Accept pipeline input: false
+Parameter Sets: (All)
 ```
 
 ## INPUTS
@@ -163,3 +167,4 @@ You can tab complete from a list of available projects.
 You can use Set-VSTeamDefaultProject to set a default project so you do not have to pass the ProjectName with each call.
 
 ## RELATED LINKS
+

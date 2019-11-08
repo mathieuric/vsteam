@@ -26,7 +26,7 @@ I am truly grateful for all the support developing VSTeam. It means a lot that y
 - Use an empty account to run the integration tests
 - Set the following Environment variables.
   - $env:ACCT = VSTS Account Name or full TFS URL including collection
-  - $env:API_VERSION = TFS2017, TFS2018 or VSTS depending on the value used for ACCT
+  - $env:API_VERSION = TFS2017, TFS2018, AzD2019 for on-prem versions, or VSTS for the Service variant, depending on the value used for ACCT
   - $env:EMAIL = Email of user to remove and re-add to account
   - $env:PAT = Personal Access token of ACCT
 
@@ -75,6 +75,8 @@ Using [Pester](https://github.com/pester/Pester) write unit test for the new fun
 At first it will feel odd to write the help and test first but the more you do it the easier it gets.
 
 Because I will not be over your shoulder you could write the tests and even the help after. **Just know if your pull request does not have tests and help it will be rejected.**
+
+**Note**: The pipeline uses a static code analysis tool for scanning the code for credentials. Please read the page [about the credential scanner](../build/CredScanTask.md)
 
 ### Code the function
 

@@ -4,7 +4,7 @@
 
 ## SYNOPSIS
 
-<!-- #include "./synopsis/Get-VSTeamBuildDefinition.md" -->
+<!-- #include "./synopsis/Get-VSTeamBuildDefinition.txt" -->
 
 ## SYNTAX
 
@@ -29,6 +29,22 @@ PS C:\> Get-VSTeamBuildDefinition -ProjectName Demo | Format-List *
 This command gets a list of all build definitions in the demo project.
 
 The pipeline operator (|) passes the data to the Format-List cmdlet, which displays all available properties (*) of the build definition objects.
+
+### -------------------------- EXAMPLE 2 --------------------------
+
+```PowerShell
+PS C:\> Get-VSTeamBuildDefinition -ProjectName Demo -id 2 -Json
+```
+
+This command returns the raw object returned from the server formatted as a JSON string.
+
+### -------------------------- EXAMPLE 3 --------------------------
+
+```PowerShell
+PS C:\> Get-VSTeamBuildDefinition -ProjectName Demo -id 2 -Raw
+```
+
+This command returns the raw object returned from the server.
 
 ## PARAMETERS
 
@@ -84,6 +100,26 @@ Parameter Sets: ByID
 Default value: -1
 ```
 
+### -JSON
+
+Converts the raw response into JSON and displays in the console. This is required when you need to use the object to send back.  Without this switch the JSON produced from the returned object will not match the expected shape of the JSON for sending back to server.
+
+```yaml
+Type: Switch
+Required: True
+Parameter Sets: ByIDJson
+```
+
+### -Raw
+
+Returns the raw response. This is required when you need to use the object to send back.  Without this switch the object produced from the returned object will not match the expected shape of the JSON for sending back to server.
+
+```yaml
+Type: Switch
+Required: True
+Parameter Sets: ByIDRaw
+```
+
 ## INPUTS
 
 ## OUTPUTS
@@ -96,7 +132,7 @@ You can pipe build definition IDs to this function.
 
 ## RELATED LINKS
 
-[Add-VSTeamAccount](Add-VSTeamAccount.md)
+[Set-VSTeamAccount](Set-VSTeamAccount.md)
 
 [Set-VSTeamDefaultProject](Set-VSTeamDefaultProject.md)
 

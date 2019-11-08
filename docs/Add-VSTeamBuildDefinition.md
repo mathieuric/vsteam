@@ -13,7 +13,7 @@ Creates a new build definition from a JSON file.
 
 Reads a JSON file off disk and uses that file to create a new build definition in the provided project.
 
-You must call Add-VSTeamAccount before calling this function.
+You must call Set-VSTeamAccount before calling this function.
 
 ## EXAMPLES
 
@@ -39,8 +39,8 @@ you do not have to pass the ProjectName with each call.
 
 ```yaml
 Type: String
-Required: true
 Position: 0
+Required: True
 Accept pipeline input: true (ByPropertyName)
 ```
 
@@ -72,3 +72,4 @@ You can use Set-VSTeamDefaultProject to set a default project so you do not have
 to pass the ProjectName with each call.
 
 ## RELATED LINKS
+
