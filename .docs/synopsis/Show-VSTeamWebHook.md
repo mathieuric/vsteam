@@ -1,1 +1,0 @@
-Opens the web hooks in the default browser.

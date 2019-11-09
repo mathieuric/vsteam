@@ -95,9 +95,9 @@
       "Team.WorkItem.ListView.ps1xml",
       "Team.WorkItemDeleted.TableView.ps1xml",
       "Team.WorkItemDeleted.ListView.ps1xml",
-      "Team.WebHook.TableView.ps1xml",
-      "Team.WebHook.ListView.ps1xml",
-      "Team.WebHook.WideView.ps1xml",
+      "Team.ServiceHook.TableView.ps1xml",
+      "Team.ServiceHook.ListView.ps1xml",
+      "Team.ServiceHook.WideView.ps1xml",
       "Team.JobRequest.TableView.ps1xml"
    ]
 }

@@ -1,38 +1,38 @@
 
 
 
-# Get-VSTeamWebHook
+# Get-VSTeamServiceHook
 
 ## SYNOPSIS
 
-Returns one or more web hooks from your project.
+Returns one or more service hooks from your project.
 
 ## SYNTAX
 
 ## DESCRIPTION
 
-Returns one or more web hooks from your project.
+Returns one or more service hooks from your project.
 
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 --------------------------
 
 ```PowerShell
-PS C:\> Get-VSTeamWebHook
+PS C:\> Get-VSTeamServiceHook
 ```
 
-This command returns all the web hooks registered for this project.
+This command returns all the service hooks registered for this project.
 
 ## PARAMETERS
 
 ### -Id
 
-The id of the web hook.
+The id of the service hook.
 
 ```yaml
 Type: guid
 Parameter Sets: ByID
-Aliases: WebHookId
+Aliases: ServiceHookId
 Required: True
 Accept pipeline input: true (ByPropertyName, ByValue)
 ```
@@ -43,7 +43,7 @@ Accept pipeline input: true (ByPropertyName, ByValue)
 
 ProjectName
 
-WebHookType
+ServiceHookType
 
 ## OUTPUTS
 

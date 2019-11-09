@@ -20,7 +20,7 @@
 PS C:\> Show-VSTeamServiceHook -ProjectName Demo
 ```
 
-This command will open a web browser to the service hooks page.
+This command will open a web browser to the service hooks page where service hooks are listed.
 
 ## PARAMETERS
 

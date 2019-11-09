@@ -1,4 +1,4 @@
-function Update-VSTeamWebHook {
+function Update-VSTeamServiceHook {
    [CmdletBinding(SupportsShouldProcess = $true, ConfirmImpact = "Medium")]
    param(
       [switch] $Force
@@ -10,7 +10,7 @@ function Update-VSTeamWebHook {
 
    Process {
 
-      if ($Force -or $pscmdlet.ShouldProcess($item, "Update Web Hook")) {
+      if ($Force -or $pscmdlet.ShouldProcess($item, "Update Service Hook")) {
       }
    }
 }

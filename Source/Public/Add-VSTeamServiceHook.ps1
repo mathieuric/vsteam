@@ -1,4 +1,4 @@
-function Add-VSTeamWebHook {
+function Add-VSTeamServiceHook {
    [CmdletBinding(DefaultParameterSetName = 'BuildCompleted')]
    param(
       [parameter(Mandatory = $true, Position = 1)]
@@ -157,7 +157,7 @@ function Add-VSTeamWebHook {
          -Method Post -ContentType 'application/json' -Body ($body | ConvertTo-Json) `
          -Version $([VSTeamVersions]::Hooks)
 
-      _applyTypesToWebHook -item $resp
+      _applyTypesToServiceHook -item $resp
 
       Write-Output $resp
    }

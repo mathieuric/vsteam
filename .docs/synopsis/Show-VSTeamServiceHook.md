@@ -1,0 +1,1 @@
+Opens the service hooks in the default browser.

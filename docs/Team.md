@@ -100,6 +100,10 @@ Adds a generic service connection
 
 Adds a new Service Fabric service endpoint.
 
+### [Add-VSTeamServiceHook](Add-VSTeamServiceHook.md)
+
+Adds a new service hook.
+
 ### [Add-VSTeamSonarQubeEndpoint](Add-VSTeamSonarQubeEndpoint.md)
 
 Adds a new SonarQube service endpoint.
@@ -284,6 +288,10 @@ Gets a service endpoint.
 
 Get service endpoint types.
 
+### [Get-VSTeamServiceHook](Get-VSTeamServiceHook.md)
+
+Returns one or more service hooks from your project.
+
 ### [Get-VSTeamTaskGroup](Get-VSTeamTaskGroup.md)
 
 Gets a task group
@@ -392,6 +400,10 @@ Removes the release definitions for a team project.
 
 Removes a service endpoint.
 
+### [Remove-VSTeamServiceHook](Remove-VSTeamServiceHook.md)
+
+Deletes a new service hook.
+
 ### [Remove-VSTeamTaskGroup](Remove-VSTeamTaskGroup.md)
 
 Removes a task group
@@ -478,6 +490,10 @@ Opens the release summary in the default browser.
 ### [Show-VSTeamReleaseDefinition](Show-VSTeamReleaseDefinition.md)
 
 Opens the release definitions for a team project in the default browser.
+
+### [Show-VSTeamServiceHook](Show-VSTeamServiceHook.md)
+
+Opens the service hooks in the default browser.
 
 ### [Show-VSTeamWorkItem](Show-VSTeamWorkItem.md)
 

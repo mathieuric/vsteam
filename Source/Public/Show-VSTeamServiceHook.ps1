@@ -1,4 +1,4 @@
-function Show-VSTeamWebHook {
+function Show-VSTeamServiceHook {
    [CmdletBinding()]
    param(
    )

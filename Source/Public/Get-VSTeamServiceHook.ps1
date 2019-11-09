@@ -1,8 +1,8 @@
-function Get-VSTeamWebHook {
+function Get-VSTeamServiceHook {
    [CmdletBinding(DefaultParameterSetName = 'ByID')]
    param(
       [Parameter(ParameterSetName = 'ByID', ValueFromPipeline = $true, Position = 0)]
-      [Alias('WebHookId')]
+      [Alias('ServiceHookId')]
       [guid[]] $Id
    )
 
@@ -15,7 +15,7 @@ function Get-VSTeamWebHook {
             $resp = _callAPI -Area 'hooks' -Resource 'subscriptions' -id $item `
                -Version $([VSTeamVersions]::Hooks)
 
-            _applyTypesToWebHook -item $resp
+            _applyTypesToServiceHook -item $resp
 
             Write-Output $resp
          }
@@ -30,7 +30,7 @@ function Get-VSTeamWebHook {
 
          # Apply a Type Name so we can use custom format view and custom type extensions
          foreach ($item in $resp.value) {
-            _applyTypesToWebHook -item $item
+            _applyTypesToServiceHook -item $item
          }
 
          Write-Output $resp.value

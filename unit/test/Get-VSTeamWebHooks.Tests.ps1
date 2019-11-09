@@ -3,7 +3,7 @@ Set-StrictMode -Version Latest
 InModuleScope VSTeam {
    [VSTeamVersions]::Account = 'https://dev.azure.com/test'
 
-   Describe 'webhooks' {
+   Describe 'Service Hooks' {
       # Mock the call to Get-Projects by the dynamic parameter for ProjectName
       Mock Invoke-RestMethod { return @() } -ParameterFilter {
          $Uri -like "*_apis/projects*"
@@ -22,8 +22,8 @@ InModuleScope VSTeam {
          value = @($obj)
       }
 
-      Context 'Get-VSTeamWebHooks' {
-         It 'Should return a list of web hooks' {
+      Context 'Get-VSTeamServiceHooks' {
+         It 'Should return a list of service hooks' {
             Mock Invoke-RestMethod {
                # If this test fails uncomment the line below to see how the mock was called.
                # Write-Host $args
@@ -31,7 +31,7 @@ InModuleScope VSTeam {
                return $collection
             }
 
-            Get-VSTeamWebHook
+            Get-VSTeamServiceHook
 
             Assert-MockCalled Invoke-RestMethod -Exactly -Scope It -Times 1 -ParameterFilter {
                $Uri -like "*https://dev.azure.com/test/_apis/hooks/subscriptions*" -and
@@ -41,8 +41,8 @@ InModuleScope VSTeam {
          }
       }
 
-      Context 'Get-VSTeamWebHooks by ID' {
-         It 'Should return a list of web hooks' {
+      Context 'Get-VSTeamServiceHooks by ID' {
+         It 'Should return a list of service hooks' {
             Mock Invoke-RestMethod {
                # If this test fails uncomment the line below to see how the mock was called.
                # Write-Host $args
@@ -50,7 +50,7 @@ InModuleScope VSTeam {
                return $obj
             }
 
-            Get-VSTeamWebHook -Id 00000000-0000-0000-0000-000000000000
+            Get-VSTeamServiceHook -Id 00000000-0000-0000-0000-000000000000
 
             Assert-MockCalled Invoke-RestMethod -Exactly -Scope It -Times 1 -ParameterFilter {
                $Uri -like "*https://dev.azure.com/test/_apis/hooks/subscriptions*" -and

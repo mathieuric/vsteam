@@ -1,17 +1,17 @@
 
 
 
-# Add-VSTeamWebHook
+# Add-VSTeamServiceHook
 
 ## SYNOPSIS
 
-Adds a new web hook.
+Adds a new service hook.
 
 ## SYNTAX
 
 ## DESCRIPTION
 
-Adds a new web hook.
+Adds a new service hook.
 
 You can learn more from the following links:
 
@@ -22,16 +22,16 @@ You can learn more from the following links:
 ### -------------------------- EXAMPLE 1 --------------------------
 
 ```PowerShell
-PS C:\> Add-VSTeamWebHook -Trigger 'Build completed' -Url http://someurl.com
+PS C:\> Add-VSTeamServiceHook -Trigger 'Build completed' -Url http://someurl.com
 ```
 
-This command adds a web hook that is triggered on each completed build and posts via HTTP to http://someurl.com
+This command adds a service hook that is triggered on each completed build and posts via HTTP to http://someurl.com
 
 ## PARAMETERS
 
 ### -Trigger
 
-The type of event this web hook is triggered on. The acceptable values for this parameter are:
+The type of event this service hook is triggered on. The acceptable values for this parameter are:
 
 - Build completed
 - Code pushed

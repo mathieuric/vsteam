@@ -1,17 +1,16 @@
+<!-- #include "./common/header.md" -->
 
-
-
-# Remove-VSTeamWebHook
+# Remove-VSTeamServiceHook
 
 ## SYNOPSIS
 
-Deletes a new web hook.
+<!-- #include "./synopsis/Remove-VSTeamServiceHook.md" -->
 
 ## SYNTAX
 
 ## DESCRIPTION
 
-Deletes a new web hook.
+<!-- #include "./synopsis/Remove-VSTeamServiceHook.md" -->
 
 You can learn more from the following links:
 
@@ -22,16 +21,16 @@ You can learn more from the following links:
 ### -------------------------- EXAMPLE 1 --------------------------
 
 ```PowerShell
-PS C:\> Remove-VSTeamWebHook -Id fb18676a-6b76-4875-88d2-fc6d1e6c9db2
+PS C:\> Remove-VSTeamServiceHook -Id fb18676a-6b76-4875-88d2-fc6d1e6c9db2
 ```
 
-This command Removes a web hook with the provided id
+This command Removes a service hook with the provided id
 
 ## PARAMETERS
 
 ### -Id
 
-The id of the web hook to remove.
+The id of the service hook to remove.
 
 ```yaml
 Type: Guid
