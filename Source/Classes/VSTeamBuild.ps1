@@ -25,4 +25,20 @@ class VSTeamBuild : VSTeamLeaf {
 
       $this.AddTypeName('Team.Build')
    }
+
+   [string] GetContent() {
+      $bp = $this.ProviderContext.BoundParameters
+
+      if ($bp) {
+         # Get-Content -Index 2
+         if ($bp.Index) {
+            return Get-VSTeamBuildLog -ProjectName $this._project -Id $this.id -Index $bp.Index
+         }
+      }
+
+      Write-Verbose "Id $($this.Id)"
+      Write-Verbose "Project2 $($this._project)"
+
+      return Get-VSTeamBuildLog -ProjectName $this._project -Id $this.Id
+   }
 }
