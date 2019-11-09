@@ -1,6 +1,6 @@
 # Changelog
 
-## 6.3.5
+## 6.4.1
 
 Added:
 
@@ -12,6 +12,54 @@ Added:
 - Get-VSTeamServiceHook
 - Show-VSTeamServiceHook
 
+## 6.4.0
+
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/214) from [Louis Tourtellotte](https://github.com/quintessential5) which included the following:
+
+Add/Update Var Group: Support for Body Param, so that json can be directly provided rather than a hashtable of variables. See the example in the documentation for more use case details.
+
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/213) from [Louis Tourtellotte](https://github.com/quintessential5) which included the following:
+
+Get-VSTeamVariableGroup fixes
+
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/212) from [Louis Tourtellotte](https://github.com/quintessential5) which included the following:
+
+Support for task groups
+
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/211) from [Dick van de Meulengraaf](https://github.com/dickvdm) which included the following:
+
+AzD2019 configuration, being Azure DevOps Server (on-prem) 2019 (17.143.28912.1)
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/209) from [Sebastian Schütze](https://github.com/SebastianSchuetze) which included the following:
+
+Added Remove-VSTeamWorkItem to delete work items
+
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/204) from [Jeroen Janssen](https://github.com/japj) which included the following:
+
+maxParallelism to Disable/Enable-VSTeamAgent
+
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/205) from [Sebastian Schütze](https://github.com/SebastianSchuetze) which included the following:
+
+Get-VSTeamWiql to get work items via [WIQL](https://docs.microsoft.com/en-us/rest/api/azure/devops/wit/wiql?view=azure-devops-rest-5.1) and also to expand the returned work items with all fields selected.
+
+**Breaking changes**:
+
+Changed signature of Get-VSTeamWorkItem to only have Id of type int[] instead of Id and Ids.
+
+## 6.3.6
+
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/200) from [Chris Gardner](https://github.com/ChrisLGardner) which included the following:
+
+Get-VSTeamPullRequest documentation was linking to Get-VSTeamWorkItem documentation
+
+## 6.3.5
+
+Updated Build-Module.ps1 to support static code analysis and running unit tests.
+Updated Merge-File.ps1 to clean trailing white-space.
+
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/199) from [Sebastian Schütze](https://github.com/SebastianSchuetze) which included the following:
+
+bug fix for update and add workitem
+
 ## 6.3.4
 
 Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/193) from [Sebastian Schütze](https://github.com/SebastianSchuetze) which included the following:
@@ -22,7 +70,7 @@ VSTS --> AzD
 
 ## 6.3.3
 
-Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/191) from [quintessential5](https://github.com/quintessential5) which included the following:
+Merged [Pull Request](https://github.com/DarqueWarrior/vsteam/pull/191) from [Louis Tourtellotte](https://github.com/quintessential5) which included the following:
 
 Get-VSTeamVariableGroup: support for getting by name as well as by ID.
 
