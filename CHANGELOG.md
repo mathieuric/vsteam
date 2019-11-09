@@ -1,6 +1,6 @@
 # Changelog
 
-## 6.4.1
+## 6.4.2
 
 Added:
 
@@ -11,6 +11,10 @@ Added:
 - Update-VSTeamWebHook
 - Get-VSTeamServiceHook
 - Show-VSTeamServiceHook
+
+## 6.4.1
+
+Fixed issue [Description on variable groups is not a required field #208](https://github.com/DarqueWarrior/vsteam/issues/208).
 
 ## 6.4.0
 
