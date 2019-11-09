@@ -115,5 +115,10 @@ function Set-VSTeamAlias {
       New-Alias Update-WorkItem Update-VSTeamWorkItem -Scope Global
       New-Alias Get-JobRequest Get-VSTeamJobRequest -Scope Global
       New-Alias Update-ReleaseDefinition Update-VSTeamReleaseDefinition -Scope Global
+      New-Alias Add-WebHook Add-VSTeamWebHook -Scope Global
+      New-Alias Get-WebHook Get-VSTeamWebHook -Scope Global
+      New-Alias Show-WebHook Show-VSTeamWebHook -Scope Global
+      New-Alias Update-WebHook Update-VSTeamWebHook -Scope Global
+      New-Alias Remove-WebHook Remove-VSTeamWebHook -Scope Global
    }
 }

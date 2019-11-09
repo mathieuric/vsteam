@@ -9,6 +9,16 @@ function _applyTypes {
    $item.PSObject.TypeNames.Insert(0, $type)
 }
 
+function _applyTypesToWebHook {
+   param($item)
+
+   # If there are ids in the list that don't map to a work item and empty
+   # entry is returned in its place if ErrorPolicy is Omit.
+   if ($item) {
+      $item.PSObject.TypeNames.Insert(0, 'Team.WebHook')
+   }
+}
+
 function _applyTypesWorkItemType {
    param($item)
 

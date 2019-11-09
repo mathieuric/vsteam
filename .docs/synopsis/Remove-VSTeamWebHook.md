@@ -1,0 +1,1 @@
+Deletes a new web hook.

@@ -24,6 +24,8 @@ This command will open a web browser with the summary of build 3.
 
 ## PARAMETERS
 
+<!-- #include "./params/projectName.md" -->
+
 ### -Id
 
 Specifies build by ID.

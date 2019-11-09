@@ -6,7 +6,7 @@ function Set-VSTeamAPIVersion {
       [string] $Target = 'TFS2017',
 
       [parameter(ParameterSetName = 'Service', Mandatory = $true, Position = 0)]
-      [ValidateSet('Build', 'Release', 'Core', 'Git', 'DistributedTask', 'VariableGroups', 'Tfvc', 'Packaging', 'MemberEntitlementManagement', 'ExtensionsManagement', 'ServiceFabricEndpoint', 'Graph', 'TaskGroups')]
+      [ValidateSet('Build', 'Release', 'Core', 'Git', 'DistributedTask', 'VariableGroups', 'Tfvc', 'Packaging', 'MemberEntitlementManagement', 'ExtensionsManagement', 'ServiceFabricEndpoint', 'Graph', 'TaskGroups', 'Hooks')]
       [string] $Service,
 
       [parameter(ParameterSetName = 'Service', Mandatory = $true, Position = 1)]
@@ -57,6 +57,9 @@ function Set-VSTeamAPIVersion {
             'TaskGroups' {
                [VSTeamVersions]::TaskGroups = $Version
             }
+            'Hooks' {
+               [VSTeamVersions]::Hooks = $Version
+            }
          }
       }
       else {
@@ -74,6 +77,7 @@ function Set-VSTeamAPIVersion {
                [VSTeamVersions]::MemberEntitlementManagement = ''
                [VSTeamVersions]::ServiceFabricEndpoint = '5.0'
                [VSTeamVersions]::ExtensionsManagement = '5.0'
+               [VSTeamVersions]::Hooks = '5.0'
                [VSTeamVersions]::Graph = ''
             }
             'TFS2018' {
@@ -90,6 +94,7 @@ function Set-VSTeamAPIVersion {
                [VSTeamVersions]::MemberEntitlementManagement = ''
                [VSTeamVersions]::ServiceFabricEndpoint = '3.2'
                [VSTeamVersions]::ExtensionsManagement = '3.2-preview'
+               [VSTeamVersions]::Hooks = '3.2'
                [VSTeamVersions]::Graph = ''
             }
             'TFS2017' {
@@ -106,6 +111,7 @@ function Set-VSTeamAPIVersion {
                [VSTeamVersions]::MemberEntitlementManagement = ''
                [VSTeamVersions]::ServiceFabricEndpoint = ''
                [VSTeamVersions]::ExtensionsManagement = '3.0-preview'
+               [VSTeamVersions]::Hooks = '3.0'
                [VSTeamVersions]::Graph = ''
             }
             Default {
@@ -125,6 +131,7 @@ function Set-VSTeamAPIVersion {
                # match Distributed Task for AzD
                [VSTeamVersions]::ServiceFabricEndpoint = '5.0-preview'
                [VSTeamVersions]::ExtensionsManagement = '5.1-preview'
+               [VSTeamVersions]::Hooks = '5.1-preview'
                [VSTeamVersions]::Graph = '5.1-preview'
             }
          }
@@ -132,17 +139,18 @@ function Set-VSTeamAPIVersion {
    }
 
    Write-Verbose [VSTeamVersions]::Version
-   Write-Verbose "Git: $([VSTeamVersions]::Git)"
-   Write-Verbose "Core: $([VSTeamVersions]::Core)"
    Write-Verbose "Build: $([VSTeamVersions]::Build)"
-   Write-Verbose "Release: $([VSTeamVersions]::Release)"
+   Write-Verbose "Core: $([VSTeamVersions]::Core)"
    Write-Verbose "DistributedTask: $([VSTeamVersions]::DistributedTask)"
-   Write-Verbose "VariableGroups: $([VSTeamVersions]::VariableGroups)"
-   Write-Verbose "Tfvc: $([VSTeamVersions]::Tfvc)"
-   Write-Verbose "Packaging: $([VSTeamVersions]::Packaging)"
-   Write-Verbose "TaskGroups: $([VSTeamVersions]::TaskGroups)"
-   Write-Verbose "MemberEntitlementManagement: $([VSTeamVersions]::MemberEntitlementManagement)"
-   Write-Verbose "ServiceFabricEndpoint: $([VSTeamVersions]::ServiceFabricEndpoint)"
    Write-Verbose "ExtensionsManagement: $([VSTeamVersions]::ExtensionsManagement)"
+   Write-Verbose "Git: $([VSTeamVersions]::Git)"
    Write-Verbose "Graph: $([VSTeamVersions]::Graph)"
+   Write-Verbose "Hooks: $([VSTeamVersions]::Hooks)"
+   Write-Verbose "MemberEntitlementManagement: $([VSTeamVersions]::MemberEntitlementManagement)"
+   Write-Verbose "Release: $([VSTeamVersions]::Release)"
+   Write-Verbose "Packaging: $([VSTeamVersions]::Packaging)"
+   Write-Verbose "ServiceFabricEndpoint: $([VSTeamVersions]::ServiceFabricEndpoint)"
+   Write-Verbose "TaskGroups: $([VSTeamVersions]::TaskGroups)"
+   Write-Verbose "Tfvc: $([VSTeamVersions]::Tfvc)"
+   Write-Verbose "VariableGroups: $([VSTeamVersions]::VariableGroups)"
 }

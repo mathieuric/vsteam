@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+   <ViewDefinitions>
+      <!--Team.WebHook.WideView-->
+      <View>
+         <Name>Team.WebHook.WideView</Name>
+         <ViewSelectedBy>
+            <TypeName>Team.WebHook</TypeName>
+         </ViewSelectedBy>
+         <WideControl>
+            <WideEntries>
+               <WideEntry>
+                  <WideItem>
+                     <PropertyName>eventType</PropertyName>
+                  </WideItem>
+               </WideEntry>
+            </WideEntries>
+         </WideControl>
+      </View>
+   </ViewDefinitions>
+</Configuration>
