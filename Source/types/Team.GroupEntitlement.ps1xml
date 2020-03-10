@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+   <Type>
+      <Name>Team.GroupEntitlement</Name>
+      <Members>
+         <ScriptProperty>
+            <Name>accessLevelName</Name>
+            <GetScriptBlock>$this.licenseRule.licenseDisplayName</GetScriptBlock>
+         </ScriptProperty>
+         <ScriptProperty>
+            <Name>groupName</Name>
+            <GetScriptBlock>$this.group.displayName</GetScriptBlock>
+         </ScriptProperty>
+         <ScriptProperty>
+            <Name>email</Name>
+            <GetScriptBlock>$this.group.mailAddress</GetScriptBlock>
+         </ScriptProperty>
+         <ScriptProperty>
+            <Name>projects</Name>
+            <GetScriptBlock>[string]::Join(", ", $this.projectEntitlements.projectRef.name)</GetScriptBlock>
+         </ScriptProperty>
+      </Members>
+   </Type>
+</Types>
